@@ -1,0 +1,10 @@
+Assignment 9
+Implementation of the labeling algorithm to generate assembly language code from the labeled tree of intermediate code.
+Input: Intermediate code in three-address code format, RSTACK a stack of r registers (R0,R1,...,Rr-1), TSTACK a stack of temporary memory locations (T0,T1,...,).
+       Instruction set 
+      MOV A,B  ; atleast one of A and B should be register or memory
+      ADD A,B  ; A=A+B, A and B are registers 
+      SUB A,B  ; A=A-B, A and B are registers 
+      MUL A,B  ; A=A*B, A and B are registers 
+      DIV A,B  ; A=A/B, A and B are registers 
+Output: Assembly language equivalent of the intermediate code with minimum register and temporary memory allocation. 

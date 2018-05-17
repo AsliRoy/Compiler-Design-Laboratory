@@ -1,0 +1,26 @@
+1. Consider the following grammar 
+   rules E->E+T|T, T->T*F|F, 
+   F->(E)|id where E,T and F are    non-terminals and +,*,(,),id    are terminals (tokens).
+(a) Design a shift-reduce parser
+   for it.
+(b) Design a operator precedence parser with the help of the following operator-precedence
+table
+      + * ( ) id $
+    + > < < > <  >
+    * > > < > <  >
+    ( < < < = <  -
+    ) > > - > -  >
+   id > > - > -  >
+    $ < < < - <  -
+(c) Give traces for the following     input strings 
+   (i)  id+id*(id+id)$
+   (ii) id*(id+$
+   A trace should show each steps of parsing including shift, reduce, accept and error operations.
+    
+Trace format
+Stack Remaing i/p string  Actions 
+----------------------------------
+$     id+id*(id+id)$      Shift id
+$id +id*(id+id)$   Reduce by F->id
+(d) Find the number of times
+    the stack and the input string     is scanned.

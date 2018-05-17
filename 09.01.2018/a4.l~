@@ -1,0 +1,20 @@
+/**
+*FLEX APPLICATION TO RECOGNIZE CHARACTER AND STRING CONSTANTS....
+*/
+%{
+
+%}
+
+
+%%
+\"(\\.|[^"\\])*\" {printf("String constants\n");} /** *FOR STRING CONSTANTS */
+\'(\\.|[^"\\])\' {printf("Character constants\n");} /** *FOR CHARACTER CONSTANTS */
+
+%%
+main(int argc, char **argv) /** *BEGINNING OF THE MAIN FUNCTION */
+{
+yylex();
+}
+
+
+

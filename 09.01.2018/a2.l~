@@ -1,0 +1,27 @@
+/**
+WRITE A FLEX APPLICATION THAT WILL IDENTIFY SIGNED/UNSIGNED INTEGER AND LONG INTEGER CONSTANTS IN DECIMAL, HEXADECIMAL, BINARY AND OCTAL REPRESENTATIONS USED IN C LANGUAGE.
+*/
+%{
+int noz=0;
+int noo=0;
+%}
+%%
+[0] {noz++;}
+[1] {noo++;}
+. {printf("invalid");}
+
+%%
+
+main(int argc, char **argv) /** *BEGINNING OF THE MAIN FUNCTION */
+{
+yylex();
+if(noz%2 !=0 && noo%2==0)
+printf("This is a valid string\n");
+else 
+printf("This is an invalid string\n");
+}
+
+
+
+
+
